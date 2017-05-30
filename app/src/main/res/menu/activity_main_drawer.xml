@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/vieworder"
+            android:title="Order Food" />
+        <item
+            android:id="@+id/fav"
+            android:icon="@drawable/favorite"
+            android:title="Favorites" />
+        <item
+            android:id="@+id/meal_planner"
+            android:icon="@drawable/mealplan"
+            android:title="Meal Planner" />
+        <item
+            android:id="@+id/offers"
+            android:icon="@drawable/offer"
+            android:title="Offers" />
+        <item
+            android:id="@+id/wallet"
+            android:icon="@drawable/wallet"
+            android:title="Wallet" />
+
+
+        <item
+                    android:id="@+id/order_stack"
+                    android:icon="@drawable/vieworder"
+                    android:title="Order Stack" />
+                <item
+                    android:id="@+id/pre_order_stack"
+                    android:icon="@drawable/vieworder"
+                    android:title="Pre Order Stack" />
+
+
+
+        <item
+            android:id="@+id/log_out"
+            android:icon="@drawable/logout"
+            android:title="Log Out" />
+
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Settings" />
+
+    </group>
+
+<!--    <item android:checkableBehavior="single">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>-->
+
+</menu>

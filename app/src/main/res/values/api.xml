@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="sign_sign">http://mousebelly.herokuapp.com/sign/sign/</string>
+
+    <string name="housewifesign_getauthorisedhw">http://mousebelly.herokuapp.com/housewifesign/getauthorisedhw/</string>
+
+    <string name="mealplan_mealplan">http://mousebelly.herokuapp.com/mealplan/mealplan/</string>
+
+
+
+</resources>
