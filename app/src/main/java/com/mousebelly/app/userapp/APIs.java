@@ -54,5 +54,18 @@ public class APIs {
     public static final String sign_walletRemainbal = DOMAIN + "/sign/walletRemainbal/";
     public static final String walletmoneyupdate = DOMAIN + "/sign/walletmoneyupdate/";
 
+    //LoadOrdersForFeedback
+    public static final String prod_approval_prod_approvalstar = DOMAIN + "/prod_approval/prod_approvalstar/";
+    public static final String order_feedbackDone = DOMAIN + "/order/feedbackDone/";
+    public static final String prod_approval_prod_approval_for_rating = DOMAIN + "/prod_approval/prod_approval_for_rating/";
+
+
+
+    public static final String feed_feed = DOMAIN + "/feed/feed";
+
+
+
+
+
 
 }

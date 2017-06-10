@@ -51,6 +51,13 @@
         <activity android:name=".signUp.UserDetails" android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".signUp.UserLocation" android:theme="@style/AppTheme.NoActionBar"></activity>
 
+        <activity android:name=".userprofile.UserprofileMapsActivity" android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".userprofile.UserprofileUploadphoto" android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".userprofile.UserprofileMainActivity" android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".userprofile.UserprofileUserPro" android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name="com.example.cropper.CropImageActivity"></activity>
+
         <activity android:name=".payment.PaymentMainActivity"
             android:parentActivityName=".MainActivity"
             android:label="Payment"

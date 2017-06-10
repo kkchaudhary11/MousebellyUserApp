@@ -185,12 +185,13 @@ public class AddToWalletPayment extends Fragment {
                 //view.loadData(finalData, "text/html; charset=utf-8", "UTF-8");
 
                 System.out.println("URL: " + url);
-                if (url.equals(APIs.DOMAIN)) {
+                if (url.equals(APIs.DOMAIN + "/")) {
                     // WalletHandler.addToWallet(Integer.parseInt(AmountToAdd));
                     CustomToast.Toast(getActivity(), "Amount Added to Wallet");
                     WalletHandler.setWalletTotalAmount();
                     System.out.println("₹"+ WalletHandler.WalletAmount);
                     MainActivity.navigationView.getMenu().getItem(4).setTitle("₹"+ WalletHandler.WalletAmount);
+
                     Intent webviewIntent = new Intent(getActivity(), MainActivity.class);
                     startActivity(webviewIntent);
                     getActivity().finish();

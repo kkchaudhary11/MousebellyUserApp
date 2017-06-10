@@ -32,6 +32,7 @@ import com.mousebelly.app.userapp.mealPlanner.MealPlan;
 import com.mousebelly.app.userapp.orderFood.Products;
 import com.mousebelly.app.userapp.orderStack.OrderStack;
 import com.mousebelly.app.userapp.preOrderStack.PreOrder;
+import com.mousebelly.app.userapp.setting.SettingOptions;
 import com.mousebelly.app.userapp.wallet.Wallet;
 
 import static com.mousebelly.app.userapp.Login.LoginActivity.USERID;
@@ -208,6 +209,10 @@ public class MainActivity extends AppCompatActivity
 
 
         } else if (id == R.id.setting) {
+            SettingOptions settingOptions = new SettingOptions();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.relative_layout_fragment,settingOptions,settingOptions.getTag()).commit();
+
 
         }
 

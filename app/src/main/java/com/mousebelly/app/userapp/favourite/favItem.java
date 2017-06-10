@@ -8,6 +8,7 @@ import android.graphics.drawable.GradientDrawable;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -122,6 +123,8 @@ public class favItem {
     int myId;
 
     RelativeLayout rl;
+    CardView cardView;
+    RelativeLayout cardViewrl;
     TextView productNameTextView;
     ImageView productIV;
     TextView productCategoryTextView;
@@ -164,22 +167,28 @@ public class favItem {
         IdManager.addId("removeButton" + this.myId);
         this.removeButton.setId((int) IdManager.stringToIdMap.get("removeButton" + this.myId));
 
+        this.cardView = new CardView(MainActivity.context);
+        IdManager.addId("cardView" + this.myId);
+        this.cardView.setId((int) IdManager.stringToIdMap.get("cardView" + this.myId));
+
+        this.cardViewrl = new RelativeLayout(MainActivity.context);
+        IdManager.addId("cardViewrl" + this.myId);
+        this.cardViewrl.setId((int) IdManager.stringToIdMap.get("cardViewrl" + this.myId));
+
     }
 
     public RelativeLayout draw(final favItem favItem) {
 
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-       /* GradientDrawable shape = new GradientDrawable();
 
-        shape.setStroke(5, ContextCompat.getColor(MainActivity.context, R.color.Affair));*/
-        rl.setBackgroundResource(R.drawable.customborder);
+
 
         //image view
         params = new RelativeLayout.LayoutParams(270, 270);
         this.productIV.setLayoutParams(params);
         this.productIV.setPadding(20, 20, 20, 20);
         this.productIV.setImageBitmap(favItem.bmpImage);
-        rl.addView(productIV);
+        cardViewrl.addView(productIV);
 
         //product name
         params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
@@ -188,7 +197,7 @@ public class favItem {
         this.productNameTextView.setTextSize(21);
         this.productNameTextView.setLayoutParams(params);
         this.productNameTextView.setText(favItem.getProd_name());
-        rl.addView(productNameTextView);
+        cardViewrl.addView(productNameTextView);
 
 
         //product category
@@ -199,7 +208,7 @@ public class favItem {
         this.productCategoryTextView.setPadding(10, 10, 10, 10);
         this.productCategoryTextView.setLayoutParams(params);
         this.productCategoryTextView.setText(favItem.getProd_category());
-        rl.addView(productCategoryTextView);
+        cardViewrl.addView(productCategoryTextView);
 
 
         //hwf name
@@ -210,7 +219,7 @@ public class favItem {
         this.hwfNameTextView.setPadding(10, 10, 10, 10);
         this.hwfNameTextView.setLayoutParams(params);
         this.hwfNameTextView.setText(favItem.getHWF_Name());
-        rl.addView(hwfNameTextView);
+        cardViewrl.addView(hwfNameTextView);
 
 
         //remove button
@@ -222,7 +231,7 @@ public class favItem {
         this.removeButton.setTextColor(Color.WHITE);
         this.removeButton.setLayoutParams(params);
         this.removeButton.setText("Remove");
-        rl.addView(removeButton);
+        cardViewrl.addView(removeButton);
 
 
 
@@ -252,6 +261,10 @@ public class favItem {
                 }).start();
             }
         });
+
+        cardView.addView(cardViewrl);
+
+        rl.addView(cardView);
 
         return rl;
     }

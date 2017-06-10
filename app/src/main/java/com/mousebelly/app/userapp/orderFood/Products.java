@@ -21,6 +21,7 @@ import com.mousebelly.app.userapp.Login.LoginActivity;
 import com.mousebelly.app.userapp.MainActivity;
 import com.mousebelly.app.userapp.R;
 import com.mousebelly.app.userapp.Server;
+import com.mousebelly.app.userapp.feedback.LoadOrdersForFeedback;
 import com.mousebelly.app.userapp.payment.PaymentMainActivity;
 
 import java.util.ArrayList;
@@ -186,6 +187,8 @@ public class Products extends Fragment {
             adMainActivity.startAd();*/
 
             pg.setVisibility(View.GONE);
+
+            new LoadOrdersForFeedback().execute();
 
             //TODO uncomment for feedback
            /* LoadOrdersForFeedback loadOrders = new LoadOrdersForFeedback();

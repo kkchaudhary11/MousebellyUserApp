@@ -6,16 +6,20 @@
     android:padding="16dp"
     android:layout_height="match_parent">
 
+    <ScrollView
+        android:id="@+id/ProductsScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+
 
     <LinearLayout
         android:id="@+id/favItem"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content"/>
 
-
-    </LinearLayout>
+    </ScrollView>
 
     <ProgressBar
         android:id="@+id/fav_progress_bar"

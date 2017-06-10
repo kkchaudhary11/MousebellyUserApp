@@ -243,7 +243,7 @@ public class OrderPayment extends Fragment {
                 //view.loadData(finalData, "text/html; charset=utf-8", "UTF-8");
 
                 System.out.println("URL: " + url);
-                if (url.equals(APIs.DOMAIN)) {
+                if (url.equals(APIs.DOMAIN + "/")) {
                             /*Intent webviewIntent = new Intent(PaymentMainActivity.this, Successfull.class);
                             startActivity(webviewIntent);*/
                     PaymentStatus paymentStatus= new PaymentStatus();

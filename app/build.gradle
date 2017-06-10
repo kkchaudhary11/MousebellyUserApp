@@ -7,9 +7,9 @@ android {
         applicationId "com.mousebelly.app.userapp"
         minSdkVersion 19
         targetSdkVersion 25
-        versionCode 13
+        versionCode 16
         multiDexEnabled true
-        versionName "2.2"
+        versionName "2.3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -45,4 +45,5 @@ dependencies {
     compile 'com.google.android.gms:play-services:10.2.0'
     compile 'com.google.android.gms:play-services-maps:10.2.0'
     testCompile 'junit:junit:4.12'
+    compile project(path: ':cropper')
 }
