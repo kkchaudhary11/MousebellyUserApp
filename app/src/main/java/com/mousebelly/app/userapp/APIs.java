@@ -23,6 +23,9 @@ public class APIs {
 
     public static final String housewifesign_housewifesign = DOMAIN + "/housewifesign/housewifesign/";
 
+    //Home
+    public static final String prod_approval_prod_hwf = DOMAIN + "/prod_approval/prod_hwf/";
+
 
 
     //Login Activity
@@ -59,6 +62,7 @@ public class APIs {
     public static final String order_feedbackDone = DOMAIN + "/order/feedbackDone/";
     public static final String prod_approval_prod_approval_for_rating = DOMAIN + "/prod_approval/prod_approval_for_rating/";
 
+    public static final String sign_deletefavorite = DOMAIN + "/sign/deletefavorite/";
 
 
     public static final String feed_feed = DOMAIN + "/feed/feed";

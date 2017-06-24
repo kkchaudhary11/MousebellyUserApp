@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -84,27 +85,19 @@ public class Products extends Fragment {
         showFav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
                 LinearLayout l = Products.productsLayout;
 
                 if (showFav.getText().equals("All food")) {
-
-         /*       for(int i=0;i<l.getChildCount();i++){
-                    RelativeLayout rl = (RelativeLayout) l.getChildAt(i);
-
-
-                        System.out.println("removing layout");
-                        l.removeView(rl);
-                }*/
+                    /*
                     l.removeAllViews();
-                    showFav.setText("Available Fav");
+                    showFav.setText("Available Fav");*/
 
-                   /* MainActivity.LoadProducts loadProducts = new LoadProducts();
-                    loadProducts.execute();*/
+                    Products products = new Products();
+                    FragmentManager manager = getActivity().getSupportFragmentManager();
+                    manager.beginTransaction().replace(R.id.relative_layout_fragment,products, products.getTag()).commit();
+
                 }
 
-                //TODO: write show fav code here
                 ArrayList<String> favItems = LoginActivity.user.getFav();
                 System.out.println("Fav. Items : " + favItems);
 
@@ -139,9 +132,6 @@ public class Products extends Fragment {
                 } else {
                     CustomToast.Toast(MainActivity.context, "No Favourite Food");
                 }
-
-
-
             }
         });
 
@@ -188,16 +178,34 @@ public class Products extends Fragment {
 
             pg.setVisibility(View.GONE);
 
+            checkFav();
+            //load pending feedbacks
             new LoadOrdersForFeedback().execute();
 
-            //TODO uncomment for feedback
-           /* LoadOrdersForFeedback loadOrders = new LoadOrdersForFeedback();
-            loadOrders.execute();*/
 
         }
 
     }
 
+    public void checkFav(){
+        ArrayList<String> favItems = LoginActivity.user.getFav();
+        if (!favItems.isEmpty() && !GetProductsData.productUnits.isEmpty() && favItems != null) {
+
+            for (String foodId : favItems) {
+
+                for(ProductUnit p : GetProductsData.productUnits.values()){
+
+                    if(p.getProd_id().equals(foodId)){
+                        System.out.println("fav food found");
+                        showFav.setVisibility(View.VISIBLE);
+                    }
+
+                }
+            }
+        } else {
+            showFav.setVisibility(View.GONE);
+        }
+    }
 
 
     public static void Productcart(){

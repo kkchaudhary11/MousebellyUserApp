@@ -167,11 +167,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.home) {
-
             Products products = new Products();
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.relative_layout_fragment,products, products.getTag()).commit();
-
 
         } else if (id == R.id.fav) {
             Fav fav= new Fav();
@@ -183,14 +181,12 @@ public class MainActivity extends AppCompatActivity
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.relative_layout_fragment,mealPlan,mealPlan.getTag()).commit();
 
-
         } else if (id == R.id.offers) {
 
         } else if (id == R.id.wallet) {
             Wallet wallet= new Wallet();
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.relative_layout_fragment,wallet,wallet.getTag()).commit();
-
 
         }else if(id == R.id.order_stack){
             OrderStack orderStack = new OrderStack();

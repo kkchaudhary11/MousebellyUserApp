@@ -36,8 +36,7 @@ import static com.mousebelly.app.userapp.MainActivity.context;
 
 public class ProductUnit {
 
-    static public int productDetailsCount = 0;
-    private static int callCount = 0;
+    private static int FoodcallCount = 0;
     RelativeLayout productViewLayout;
     CardView cards;
     ImageView itemImage;
@@ -76,6 +75,7 @@ public class ProductUnit {
     private String Stock_Value;
     private String Stock_Value_User;
     private Bitmap bmpImage;
+    private String Type;
     private int Id;
 
 
@@ -252,6 +252,14 @@ public class ProductUnit {
         Stock_Value_User = stock_Value_User;
     }
 
+    public String getType() {
+        return Type;
+    }
+
+    public void setType(String type) {
+        Type = type;
+    }
+
     //    Dynamic list
 
     @Override
@@ -279,17 +287,9 @@ public class ProductUnit {
 
 
     public ProductUnit() {
-       /* Typeface trumpitFace = Typeface.createFromAsset(context.getAssets(), "fonts/Trumpit.ttf");
-        Typeface rupeeSymbol = Typeface.createFromAsset(context.getAssets(), "fonts/IndianRupee.ttf");
-        final Typeface maze = Typeface.createFromAsset(context.getAssets(), "fonts/The Heart Maze Demo.ttf");
-        final Typeface epicselfie = Typeface.createFromAsset(context.getAssets(), "fonts/My Epic Selfie Demo.ttf");
-        Typeface novaoval = Typeface.createFromAsset(context.getAssets(), "fonts/NovaOval.ttf");
-*/
-        ProductUnit.productDetailsCount++;
-        Log.d(String.valueOf(ProductUnit.productDetailsCount), "ProductUnit: ");
-        this.Id = ProductUnit.productDetailsCount;
 
-//        Setting Parant Layout and ids
+
+        //  Setting Parant Layout and ids
         this.productViewLayout = new RelativeLayout(context);
         IdManager.addId("Productlistid" + this.Id);
         this.productViewLayout.setId((Integer) IdManager.stringToIdMap.get("Productlistid" + this.Id));
@@ -566,38 +566,38 @@ public class ProductUnit {
 
     public RelativeLayout showCart(final ProductUnit productUnit) {
 
-        callCount++;
+        FoodcallCount++;
 
         RelativeLayout rl = new RelativeLayout(context);
 
-        IdManager.addId("productNameTextView" + callCount);
-        rl.setId((int) IdManager.stringToIdMap.get("productNameTextView" + callCount));
+        IdManager.addId("productNameTextView" + FoodcallCount);
+        rl.setId((int) IdManager.stringToIdMap.get("productNameTextView" + FoodcallCount));
 
         rl.setTag(productUnit.getProd_id());
 
         ImageView iv = new ImageView(context);
-        IdManager.addId("productImageView" + callCount);
-        iv.setId((int) IdManager.stringToIdMap.get("productImageView" + callCount));
+        IdManager.addId("productImageView" + FoodcallCount);
+        iv.setId((int) IdManager.stringToIdMap.get("productImageView" + FoodcallCount));
 
         TextView tv = new TextView(context);
-        IdManager.addId("productNameView" + callCount);
-        tv.setId((int) IdManager.stringToIdMap.get("productNameView" + callCount));
+        IdManager.addId("productNameView" + FoodcallCount);
+        tv.setId((int) IdManager.stringToIdMap.get("productNameView" + FoodcallCount));
 
         final TextView qty = new TextView(context);
-        IdManager.addId("productQtyView" + callCount);
-        qty.setId((int) IdManager.stringToIdMap.get("productQtyView" + callCount));
+        IdManager.addId("productQtyView" + FoodcallCount);
+        qty.setId((int) IdManager.stringToIdMap.get("productQtyView" + FoodcallCount));
 
         Button delete = new Button(context);
-        IdManager.addId("productDeleteView" + callCount);
-        delete.setId((int) IdManager.stringToIdMap.get("productDeleteView" + callCount));
+        IdManager.addId("productDeleteView" + FoodcallCount);
+        delete.setId((int) IdManager.stringToIdMap.get("productDeleteView" + FoodcallCount));
 
         Button incQty = new Button(context);
-        IdManager.addId("productIncView" + callCount);
-        incQty.setId((int) IdManager.stringToIdMap.get("productIncView" + callCount));
+        IdManager.addId("productIncView" + FoodcallCount);
+        incQty.setId((int) IdManager.stringToIdMap.get("productIncView" + FoodcallCount));
 
         Button decQty = new Button(context);
-        IdManager.addId("productDecView" + callCount);
-        decQty.setId((int) IdManager.stringToIdMap.get("productDecView" + callCount));
+        IdManager.addId("productDecView" + FoodcallCount);
+        decQty.setId((int) IdManager.stringToIdMap.get("productDecView" + FoodcallCount));
 
 
         // product image

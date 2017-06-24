@@ -23,17 +23,12 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Login.LoginActivity"
             android:label="Log in"
             android:theme="@style/AppTheme.NoActionBar">
 
-        </activity>
-        <activity android:name="com.mousebelly.app.userapp.Splash"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,27 +36,42 @@
             </intent-filter>
 
         </activity>
-
-        <activity android:name=".orderFood.ChangeLocation"
-            android:label="Change Location"
+        <activity
+            android:name=".Splash"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
+
         </activity>
-
-        <activity android:name=".signUp.SignUpMainActivity" android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".signUp.UserDetails" android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".signUp.UserLocation" android:theme="@style/AppTheme.NoActionBar"></activity>
-
-        <activity android:name=".userprofile.UserprofileMapsActivity" android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".userprofile.UserprofileUploadphoto" android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".userprofile.UserprofileMainActivity" android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".userprofile.UserprofileUserPro" android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity android:name="com.example.cropper.CropImageActivity"></activity>
-
-        <activity android:name=".payment.PaymentMainActivity"
-            android:parentActivityName=".MainActivity"
+        <activity
+            android:name=".orderFood.ChangeLocation"
+            android:label="Change Location"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".signUp.SignUpMainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".signUp.UserDetails"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".signUp.UserLocation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".userprofile.UserprofileMapsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".userprofile.UserprofileUploadphoto"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".userprofile.UserprofileMainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".userprofile.UserprofileUserPro"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name="com.example.cropper.CropImageActivity" />
+        <activity
+            android:name=".payment.PaymentMainActivity"
             android:label="Payment"
-            ></activity>
+            android:parentActivityName=".MainActivity" />
 
 
         <meta-data
@@ -71,9 +81,10 @@
         <!--
        Production Maps API : AIzaSyADD6aDi8xm5ICtpEUKt96Am-t0LMTdTuI
        Google Maps Local API  :  AIzaSyBNqLv-JKug_UjiREo1yHdhtMF1i3VszF8
-       -->
+        -->
 
-
+        <activity android:name=".home.Home">
+        </activity>
     </application>
 
 </manifest>

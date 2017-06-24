@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/selectImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="12dp"
+            android:textColor="#ffffff"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:onClick="onSelectImageClick"
+            android:text="@string/main_button_select_image" />
+
+        <ImageView
+            android:layout_below="@+id/selectImage"
+            android:id="@+id/quick_start_cropped_image"
+            android:layout_width="match_parent"
+            android:layout_height="273dp"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/result_image_desc"
+            android:background="@drawable/customborder"
+            android:layout_weight="0.06" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:layout_alignParentBottom="true"
+            android:textStyle="bold"
+            android:text="Update"
+            android:textColor="#ffffff" />
+
+
+</RelativeLayout>
+

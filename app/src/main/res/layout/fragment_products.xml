@@ -63,6 +63,7 @@
                     android:backgroundTint="@color/Amulet"
                     android:drawableRight="@drawable/fav_white_small"
                     android:paddingRight="16dp"
+                    android:visibility="gone"
                     android:paddingLeft="16dp"
                     android:text="Available Fav"
                     android:textColor="@android:color/white"

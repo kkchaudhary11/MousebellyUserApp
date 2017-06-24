@@ -48,6 +48,7 @@ import com.mousebelly.app.userapp.R;
 import com.mousebelly.app.userapp.Server;
 import com.mousebelly.app.userapp.SocketAccess;
 import com.mousebelly.app.userapp.WalletHandler;
+import com.mousebelly.app.userapp.home.Home;
 import com.mousebelly.app.userapp.signUp.SignUpMainActivity;
 
 import org.json.JSONArray;
@@ -59,6 +60,7 @@ import java.util.List;
 
 import io.socket.emitter.Emitter;
 
+import static android.Manifest.permission.LOCATION_HARDWARE;
 import static android.Manifest.permission.READ_CONTACTS;
 
 /**
@@ -82,6 +84,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private ProgressDialog loginProgress;
     private TextView Signup;
     private View mLoginFormView;
+    private Button withoutLogin;
 
     TextView forgetPass;
 
@@ -103,6 +106,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
+
+        withoutLogin = (Button)findViewById(R.id.without_login);
+        withoutLogin.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(LoginActivity.this, Home.class);
+                startActivity(i);
+            }
+        });
 
 
         mPasswordView = (EditText) findViewById(R.id.password);

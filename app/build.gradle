@@ -7,9 +7,9 @@ android {
         applicationId "com.mousebelly.app.userapp"
         minSdkVersion 19
         targetSdkVersion 25
-        versionCode 16
+        versionCode 17
         multiDexEnabled true
-        versionName "2.3"
+        versionName "2.4"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -37,6 +37,7 @@ dependencies {
     compile files('libs/socket.io-client-0.8.2.jar')
     compile files('libs/org-apache-commons-codec.jar')
 
+    compile project(path: ':cropper')
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
@@ -45,5 +46,4 @@ dependencies {
     compile 'com.google.android.gms:play-services:10.2.0'
     compile 'com.google.android.gms:play-services-maps:10.2.0'
     testCompile 'junit:junit:4.12'
-    compile project(path: ':cropper')
 }
